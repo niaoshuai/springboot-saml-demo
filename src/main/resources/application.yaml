@@ -1,0 +1,25 @@
+server:
+  servlet:
+    context-path: /
+logging:
+  level:
+    ren:
+      shuaipeng: trace
+    org:
+      springframework:
+        security: trace
+spring:
+  security:
+    saml2:
+      relyingparty:
+        registration:
+          aliyunidaas:
+            signing:
+              credentials:
+                certificate-location: "classpath:credentials/saml_sign.cer"
+            assertingparty:
+              entity-id: ""
+              singlesignon:
+                sign-request: false
+                url:  ""
+              metadata-uri:  ""
